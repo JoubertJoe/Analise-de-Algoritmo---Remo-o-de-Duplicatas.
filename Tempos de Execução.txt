@@ -1,0 +1,43 @@
+Divide and Conquer :
+
+Quantidade de Elementos :10
+Tempo total:20968 NanoSegundos
+--------------------------------------
+
+Quantidade de Elementos :100
+Tempo total:148400 NanoSegundos
+--------------------------------------
+
+Quantidade de Elementos :1000
+Tempo total:1916798 NanoSegundos
+--------------------------------------
+
+Quantidade de Elementos :1.000
+Melhor 	caso:	2	MiliSegundos
+Pior 	caso:	8	Milisegundos
+--------------------------------------
+
+Quantidade de Elementos :10.000
+Melhor 	caso : 	4  MiliSegundos
+Pior 	caso :	36 MiliSegundos
+--------------------------------------
+
+Quantidade de Elementos :100.000
+Melhor 	caso : 	26  MiliSegundos
+Pior 	caso :	40	MiliSegundos
+--------------------------------------
+
+Quantidade de Elementos :1.000.000
+Melhor caso: 220 MiliSegundos
+Melhor caso: 244 MiliSegundos
+--------------------------------------
+
+Quantidade de Elementos :10.000.000
+Melhor	caso:	2218 MiliSegundos
+Pior 	caso:	2370 MiliSegundos
+--------------------------------------
+
+Quantidade de Elementos :100.000.000
+Melhor	Caso:	24353 MiliSegundos
+Pior	Caso:	25146 MiliSegundos
+---------------------------------------
