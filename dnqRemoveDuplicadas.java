@@ -90,9 +90,11 @@ public class dnqRemoveDuplicadas {
 			int randomNum = 1 + (int) (Math.random() * tamanhoVetor / 10);
 			vetor[i] = randomNum;
 					}
-		long time = System.currentTimeMillis();
+//		long time = System.currentTimeMillis();
+		long time = System.nanoTime();
 		mergeSort(vetor, 0, vetor.length - 1);
-		long afterTime = System.currentTimeMillis();
+//		long afterTime = System.currentTimeMillis();
+		long afterTime = System.nanoTime();
 		//System.out.print(afterTime - time + "\t");
 		return afterTime - time;
 	}
@@ -119,20 +121,14 @@ public class dnqRemoveDuplicadas {
 	System.out.println("--------------------------------");
 */
 		System.out.println("Inicio 100mil, final 1milhão, repetições : 10 || Médias :");
-		for (int i = 100000; i <= 1000000;) {
+		for (int i = 0; i <= 20;) {
 			long media = 0;
-			media = media + automacao(i);
-			media = media + automacao(i);
-			media = media + automacao(i);
-			media = media + automacao(i);
-			media = media + automacao(i);
-			media = media + automacao(i);
-			media = media + automacao(i);
-			media = media + automacao(i);
-			media = media + automacao(i);
-			media = media + automacao(i);
-			System.out.println(media/10);
-			i=i+100000;
+			for (int j = 0; j < 200; j++) {
+				media = media + automacao(i);	
+			}			
+			System.out.print(media/200 + "\t");
+			//System.out.print(i + "\t");
+			i=i+1;
 			
 		}
 	}
