@@ -83,9 +83,22 @@ public class dnqRemoveDuplicadas {
 			}
 		}
 	}
+	
+	static long automacao(int tamanhoVetor) {
+		long vetor[] = new long[tamanhoVetor];
+		for (int i = 0; i < vetor.length; i++) {
+			int randomNum = 1 + (int) (Math.random() * tamanhoVetor / 10);
+			vetor[i] = randomNum;
+					}
+		long time = System.currentTimeMillis();
+		mergeSort(vetor, 0, vetor.length - 1);
+		long afterTime = System.currentTimeMillis();
+		//System.out.print(afterTime - time + "\t");
+		return afterTime - time;
+	}
 
 	public static void main(String args[]) {
-		ArrayList<Long> lista = new ArrayList<Long>();
+/*		ArrayList<Long> lista = new ArrayList<Long>();
 		int tamanhoVetor = 1000;
 		long vetor[] = new long[tamanhoVetor];
 		for (int i = 0; i < vetor.length; i++) {
@@ -93,18 +106,35 @@ public class dnqRemoveDuplicadas {
 			vetor[i] = randomNum;
 		}
 
-		// printArray(vetor);
-		long time = System.currentTimeMillis();
-		mergeSort(vetor, 0, vetor.length - 1);
-		long afterTime = System.currentTimeMillis();
-		// vetorLista(vetor, lista);
-		System.out.println(lista.toString());
-		System.out.println("Quantidade de Elementos :" + tamanhoVetor);
-		// System.out.println("Inicio :" + time);
-		// System.out.println("FIM :" + afterTime);
-		System.out.println("Tempo total:" + (afterTime - time) + " MiliSegundos");
-		System.out.println("--------------------------------");
-
+	printArray(vetor);
+	long time = System.currentTimeMillis();
+	mergeSort(vetor, 0, vetor.length - 1);
+	long afterTime = System.currentTimeMillis();
+	vetorLista(vetor, lista);
+	System.out.println(lista.toString());
+	System.out.println("Quantidade de Elementos :" + tamanhoVetor);
+	System.out.println("Inicio :" + time);
+	System.out.println("FIM :" + afterTime);
+	System.out.println("Tempo total:" + (afterTime - time) + " MiliSegundos");
+	System.out.println("--------------------------------");
+*/
+		System.out.println("Inicio 100mil, final 1milhão, repetições : 10 || Médias :");
+		for (int i = 100000; i <= 1000000;) {
+			long media = 0;
+			media = media + automacao(i);
+			media = media + automacao(i);
+			media = media + automacao(i);
+			media = media + automacao(i);
+			media = media + automacao(i);
+			media = media + automacao(i);
+			media = media + automacao(i);
+			media = media + automacao(i);
+			media = media + automacao(i);
+			media = media + automacao(i);
+			System.out.println(media/10);
+			i=i+100000;
+			
+		}
 	}
 
 }
